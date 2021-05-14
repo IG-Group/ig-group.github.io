@@ -13,7 +13,7 @@ You will find a project in Github that we use to generate our “rules of engage
 The project generates API Documents, JSON Schema, Java bindings and defines TypeScript interfaces. 
 
 You don’t need to build this project as the artifacts are published to “oss.sonatype.org” and can be downloaded from there.
-You’ll want to download the roe.zip for both the WebSocket and FIX API.
+You’ll want to download the roe.zip for either the WebSocket or FIX API.
 
 [![Sonatype Nexus (Releases)](https://img.shields.io/nexus/r/com.ig.orchestrations.us.rfed/document-websocket?label=WebSocket&server=https%3A%2F%2Foss.sonatype.org%2F)](https://oss.sonatype.org/#nexus-search;gav~com.ig.orchestrations.us.rfed~document-websocket~~~)
 
