@@ -13,13 +13,12 @@ You will find a project in Github that we use to generate our “rules of engage
 The project generates API Documents, JSON Schema, Java bindings and defines TypeScript interfaces. 
 
 You don’t need to build this project as the artifacts are published to “oss.sonatype.org” and can be downloaded from there.
-You’ll want to download the roe.zip for either the WebSocket or FIX API.
+You’ll want to download the roe.zip for either the WebSocket or FIX API. You can follow the following links to the download location.
 
-[![Sonatype Nexus (Releases)](https://img.shields.io/nexus/r/com.ig.orchestrations.us.rfed/document-websocket?label=WebSocket&server=https%3A%2F%2Foss.sonatype.org%2F)](https://oss.sonatype.org/#nexus-search;gav~com.ig.orchestrations.us.rfed~document-websocket~~~)
-
-For information related to our FIX5.0SP2 API, please see the latest rules of engagement zip distribution in Sonatype.
-
-[![Sonatype Nexus (Releases)](https://img.shields.io/nexus/r/com.ig.orchestrations.us.rfed/document-fixt?label=FIXT&server=https%3A%2F%2Foss.sonatype.org%2F)](https://oss.sonatype.org/#nexus-search;gav~com.ig.orchestrations.us.rfed~document-fixt~~~)
+| **API**   | **Artifact** |
+|-----------|--------------------------|
+| WebSocket | [![Sonatype Nexus (Releases)](https://img.shields.io/nexus/r/com.ig.orchestrations.us.rfed/document-websocket?label=WebSocket&server=https%3A%2F%2Foss.sonatype.org%2F)](https://oss.sonatype.org/#nexus-search;gav~com.ig.orchestrations.us.rfed~document-websocket~~~) | 
+| FIX5.0SP2	    | [![Sonatype Nexus (Releases)](https://img.shields.io/nexus/r/com.ig.orchestrations.us.rfed/document-fixt?label=FIXT&server=https%3A%2F%2Foss.sonatype.org%2F)](https://oss.sonatype.org/#nexus-search;gav~com.ig.orchestrations.us.rfed~document-fixt~~~)   |
 
 The project structure is as follows:
 
@@ -43,22 +42,21 @@ The project structure is as follows:
 
 ## WebSocket APIs
 The WebSocket APIs are built on FIX/P and FIX Orchestra. The latter is a new FIX Trading Community initiative that is in active development.
-Ref: 
--	[Fix Trading](https://www.fixtrading.org/)
+Please see: 
+-	[Fix Trading Community](https://www.fixtrading.org/)
 -	[Fix Orchestra](https://www.fixtrading.org/standards/fix-orchestra/)
--	[Fix Trading Standards](https://www.fixtrading.org/standards/)
+-	[Fix Protocol Standards](https://www.fixtrading.org/standards/)
 
 ## WebSocket Client Examples
 You can also find simple WebSocket Client Examples here:
-- [Node](https://github.com/IG-Group/fix-ws-client-example)
-- [Python Pre-Trade](https://github.com/IG-Group/ig-us-websocket-client-python-example) 
-- [Python Trade](https://github.com/IG-Group/ig-us-websocket-trade-python-example)
-- [Java](https://github.com/IG-Group/ig-us-websocket-java-examples)
+- [Node Example](https://github.com/IG-Group/fix-ws-client-example)
+- [Python Pre-Trade Example](https://github.com/IG-Group/ig-us-websocket-client-python-example) 
+- [Python Trade Example](https://github.com/IG-Group/ig-us-websocket-trade-python-example)
+- [Java Example](https://github.com/IG-Group/ig-us-websocket-java-examples)
 
-Logging onto the WebSocket API using username and password results in a “logout” messages being sent to web platform (as it does when you try to log on to the web platform multiple times). 
+N.B. Logging onto the WebSocket API using username and password results in a “logout” messages being sent to web platform (as it does when you try to log on to the web platform multiple times). For testing you can log onto the API first. Logging onto web platform does not log out the API.
 
-For testing you can log onto the API first. Logging onto web platform does not log out the API.
-These are the Demo environment Hosts, port and URLs.  See the example.
+These are the Demo connection details.  Please refer to the examples.
 
 | **API**   | **Host**                 | **Port** | **Path**  |
 |-----------|--------------------------|----------|-----------|
@@ -68,9 +66,9 @@ These are the Demo environment Hosts, port and URLs.  See the example.
 ## FIX API Client Example
 - [Java](https://github.com/IG-Group/ig-us-websocket-java-examples)
 
-We have added our IG US FIX dictionary to the open source QuickFixJ project. This is our QuickFixJ github forked repository: [qfj-ig-us](https://github.com/IG-Group/qfj-ig-us)
+We have updated a fork of the open source QuickFix/J project to support our API including a customised QuickFIX/J dictionary. This is our QuickFixJ github forked repository: [qfj-ig-us](https://github.com/IG-Group/qfj-ig-us)
 
-We have made artifacts publicly available in Sonatype.
+We have made artifacts publicly available in Sonatype at the following location:
 
 [![Sonatype Nexus (Releases)](https://img.shields.io/nexus/r/com.ig.us.otc/quickfixj-all?label=QuickFixJ&server=https%3A%2F%2Foss.sonatype.org%2F)](https://oss.sonatype.org/#nexus-search;gav~com.ig.us.otc~~~)
 
