@@ -2,15 +2,14 @@
 
 # Table of Contents
 - [Rules of Engagement](#rules-of-engagement)
-- [WebSocket APIs](#websocket-apis)
-- [Websocket Client Examples](#websocket-client-examples)
-- [FIX API Client Example](#fix-api-client-example)
-- [Contact](#contact)
+- [FIX Based APIs](#fix-based-apis)
+- [WebSocket API](#websocket-api)
+- [FIX API](#fix-api)
 
 ## Rules of Engagement 
-You will find a project in Github that we use to generate our “rules of engagement”: [ig-orchestrations](https://github.com/IG-Group/ig-orchestrations)
+You will find the [ig-orchestrations](https://github.com/IG-Group/ig-orchestrations) project in Github. 
 
-The project generates API Documents, JSON Schema, Java bindings and defines TypeScript interfaces. 
+The project contains and/or generates API Documents, as well as JSON Schema, Java bindings and TypeScript interfaces. 
 
 You don’t need to build this project as the artifacts are published to “oss.sonatype.org” and can be downloaded from there.
 You’ll want to download the roe.zip for either the WebSocket or FIX API. You can follow the following links to the download location.
@@ -20,32 +19,23 @@ You’ll want to download the roe.zip for either the WebSocket or FIX API. You c
 | WebSocket | [![Sonatype Nexus (Releases)](https://img.shields.io/nexus/r/com.ig.orchestrations.us.rfed/document-websocket?label=WebSocket&server=https%3A%2F%2Foss.sonatype.org%2F)](https://oss.sonatype.org/#nexus-search;gav~com.ig.orchestrations.us.rfed~document-websocket~~~) | 
 | FIX5.0SP2	    | [![Sonatype Nexus (Releases)](https://img.shields.io/nexus/r/com.ig.orchestrations.us.rfed/document-fixt?label=FIXT&server=https%3A%2F%2Foss.sonatype.org%2F)](https://oss.sonatype.org/#nexus-search;gav~com.ig.orchestrations.us.rfed~document-fixt~~~)   |
 
-The project structure is as follows:
+### How to use the "Rules of Engagement" documents.
 
-```
-│   readme.md - Describes how to build the project using Apache Maven and NPM, the outputs of the mvn build steps is generally in subdirectories named  “target”.
-└───chart-data - For the Chart Data API this contains the JSON Schema source code and build for the Java bindings.
-│   └───java-bindings - Generates the Java/JSON bindings.
-│   └───json-schema - Source code for the JSON schema.
-└───fixp - For the FIX Performance protocol this contains the JSON Schema source code and build for the Java bindings.
-│   └───java-binding - Generates the Java/JSON bindings
-│   └───json-schema - Source code for the JSON schema.
-└───ig-us-rfed – Contains the FIX “orchestration” and supporting information for the IG US RFED API.
-│   |───document/ 
-│   |   └───document-websocket - Generates the Rules of Engagement in markdown and HTML for the WebSocket API.
-│   |   └───document-fixt - Generates the Rules of Engagement in markdown and HTML for the FIX50sp2/FIXT1.1 API.
-│   └───java-binding - Generates the Java/JSON bindings.
-│   └───json-schema – Generates the JSON Schema.
-│   └───orchestration – Generates the IG RFED “orchestration” from the FIX Standard orchestration – an XML document.
-│   └───ts-interface - TypeScript interfaces.
-```
+The conventional FIX API is documented with Markdown and HTML. These can both be found in the deployed artifact referenced above. The Markdown can be viewed without downloading the artifact.
 
-## WebSocket APIs
-The WebSocket APIs are built on FIX/P and FIX Orchestra. The latter is a new FIX Trading Community initiative that is in active development.
+ * [Markdown](https://github.com/IG-Group/ig-orchestrations/tree/master/ig-us-rfed/document/document-fixt/markdown) for the FIX50SP2 over FIXT1.1 API
+
+* [Markdown](https://github.com/IG-Group/ig-orchestrations/tree/master/ig-us-rfed/document/document-websocket/markdown) for the eWebSocket API
+
+## FIX Based APIs
+
+The APIs are built on FIXT1.1 or FIX/P and defined using FIX Orchestra. The latter is a new FIX Trading Community initiative that is in active development.
 Please see: 
 -	[Fix Trading Community](https://www.fixtrading.org/)
 -	[Fix Orchestra](https://www.fixtrading.org/standards/fix-orchestra/)
 -	[Fix Protocol Standards](https://www.fixtrading.org/standards/)
+
+## WebSocket API
 
 ## WebSocket Client Examples
 You can also find simple WebSocket Client Examples here:
@@ -63,7 +53,8 @@ These are the Demo connection details.  Please refer to the examples.
 | Pre Trade | demo-iguspretrade.ig.com | 443	    | /pretrade |
 | Trade	    | demo-igustrade.ig.com	   | 443	    | /trade    |	 	 
 
-## FIX API Client Example
+## FIX API
+### FIX API Client Example
 - [Java](https://github.com/IG-Group/ig-us-websocket-java-examples)
 
 We have updated a fork of the open source QuickFix/J project to support our API including a customised QuickFIX/J dictionary. This is our QuickFixJ github forked repository: [qfj-ig-us](https://github.com/IG-Group/qfj-ig-us)
@@ -73,7 +64,7 @@ We have made artifacts publicly available in Sonatype at the following location:
 [![Sonatype Nexus (Releases)](https://img.shields.io/nexus/r/com.ig.us.otc/quickfixj-all?label=QuickFixJ&server=https%3A%2F%2Foss.sonatype.org%2F)](https://oss.sonatype.org/#nexus-search;gav~com.ig.us.otc~~~)
 
 
-## Contact
+### Contact
 In order to use the FIX API, please contact Trading Services with the details below.
 
 | **Department**    | **Contact Email**    |
